@@ -4,16 +4,16 @@ A clínica Exemplo precisa exibir a listagem de seus médicos separados por espe
 ## Solução
 Foi criado uma solução totalmente alimentada pela API disponibilizada, onde suas operações é no formato de CRUD (Create, Read, Update and Delete).
 
-### Inicio
+### Inicio:
 ![Screenshot](inicio.png)
 
-### Consulta da especialidade
+### Consulta da especialidade:
 ![Screenshot](consultaEspecialidade.png)
 
-### Cadastro
+### Cadastro:
 ![Screenshot](cadastro.png)
 
-### Lista dos cadastrados
+### Lista dos cadastrados:
 ![Screenshot](consultaCadastradoEAlerta.png)
 
 ## Instalação
