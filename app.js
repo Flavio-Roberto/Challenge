@@ -22,12 +22,7 @@ app.get('/:id?', function(req, res){
         })
     }
 })
-// app.get('/script', function(req, res){
-//     res.sendFile(__dirname+'/js/script.js');
-// })
-// app.get('/style', function(req, res){
-//     res.sendFile(__dirname+'/css/style.css');
-// })
+
 app.use('/js', express.static('js'));
 app.use('/css', express.static('css'));
 app.post('/salvar',urlencodeParser,function(req,res){
