@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://lh5.googleusercontent.com/-ToFZva435XU/AAAAAAAAAAI/AAAAAAAAAAA/MHFCSpuRm5k/s44-p-k-no-ns-nd/photo.jpg" alt="Logo" width="80" height="80">
+    <img src="https://media-exp1.licdn.com/dms/image/C560BAQF9FCC8Vj4QOw/company-logo_200_200/0?e=2159024400&v=beta&t=SMQitaWk_NifTq_SDyZ9ee6noqaVHqbV5mGrdujscWQ" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Feegow Challenge</h3>
