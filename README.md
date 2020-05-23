@@ -35,8 +35,10 @@ CREATE TABLE `agendarprofissional` (
 
 ```
 ### Código
+
 ```
 npm install
+node app.js
 ```
 
 ## Tecnologias Utilizadas 
