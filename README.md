@@ -1,3 +1,20 @@
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="https://lh5.googleusercontent.com/-ToFZva435XU/AAAAAAAAAAI/AAAAAAAAAAA/MHFCSpuRm5k/s44-p-k-no-ns-nd/photo.jpg" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Feegow Challenge</h3>
+
+  <p align="center">
+    Esse é um teste focado em design de código, e conhecimento de orientação a objeto.
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Desafio »</strong></a>
+    <br />
+  </p>
+</p>
+
 ## Introdução do problema
 A clínica Exemplo precisa exibir a listagem de seus médicos separados por especialidade em seu site para que seus pacientes tenham acesso. Essa clínica utiliza o Feegow que possui toda a api necessária para isso, disponibilizada pela empresa.
 
