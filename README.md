@@ -10,7 +10,7 @@
   <p align="center">
     Esse é um teste focado em design de código, e conhecimento de orientação a objeto.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Desafio »</strong></a>
+    <a href="https://github.com/feegow/feegow-challenge"><strong>Desafio »</strong></a>
     <br />
   </p>
 </p>
