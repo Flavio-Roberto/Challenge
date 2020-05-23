@@ -19,6 +19,7 @@ Foi criado uma solução totalmente alimentada pela API disponibilizada, onde su
 ## Instalação
 
 ### Banco
+A `porta do mysql está como: 3306`, sé sua porta for diferente, tem que muda-la.
 ```
 CREATE DATABSE feegow;
 
@@ -35,7 +36,7 @@ CREATE TABLE `agendarprofissional` (
 
 ```
 ### Código
-
+No terminal, só digitar a sequencia abaixo, lembrando que a `porta é: 3000`
 ```
 npm install
 node app.js
