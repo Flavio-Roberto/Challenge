@@ -22,7 +22,7 @@ CREATE TABLE `agendarprofissional` (
 );
 
 ```
-### Codigo
+### Código
 ```
 npm install
 ```
