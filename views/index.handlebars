@@ -1,0 +1,80 @@
+    <!-- Modal -->
+    <div class="modal fade " id="abreModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Preencha seus dados</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form name="form" id="form" action="salvar" method="post">
+          <input type="hidden" name="ap_id" id="agendarProfissional_id" value="" />
+          <input type="hidden" name="date_time" value="{{now}}" />
+          <input type="hidden" name="profissional_id" id="profissional_id" />
+          <input type="hidden" name="specialty_id" id="specialty_id" />
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" class="form-control form-control-sm" id="nome" name="nome" placeholder="Nome Completo">
+              </div>
+              <div class="col-md-6">
+                <select class="form-control form-control-sm" name="source_id" id="comoConheceu" >
+                  <option value="" disabled selected>Como conheceu?</option>
+                </select>
+              </div>
+              <div class="col" style="margin-top: 1em;">
+                <input type="date" class="form-control form-control-sm" name="birthdate" id="nascimento" placeholder="Nascimento">
+              </div>
+              <div class="col" style="margin-top: 1em;">
+                <input type="text" class="form-control form-control-sm" id="cpf" name="cpf" maxlength="11" placeholder="CPF">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" id="salvarHorarios" class="btn btn-primary btn-sm">Solicitar Horários</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+        <div class="d-flex justify-content-center selecaoEspecialidade" >
+              <form class="form-inline mb-2">
+                <label class="titulo">Consulta de </label>
+                        <select class="form-control" id="especialidades" required >
+                          <option value="" disabled selected>Selecione a especialidade</option>
+                        </select>
+              </form>
+        </div>
+        <div class="d-flex justify-content-center" >
+          <div class="agendados">
+              <h6 style="width: 100%;">Agendados:</h6>
+              <br/>
+              {{#data}}
+              <div class="d-flex flex-row">
+                <div class="p-2 bd-highlight">
+                  <div style="background: #f1f1f1;width: 40px;height: 40px;display: block;border-radius: 75px 75px;"></div>
+                </div>
+                <div class="p-2 bd-highlight"> Paciente: {{name}}
+                  <br/> <span class="medico" name="{{profissional_id}}"></span> <br/>
+                    <button type="button" id="editar" class="editar" onclick="montarAgendamento('{{name}}',{{source_id}},'{{cpf}}','{{birthdate}}',{{agendarProfissional_id}})" data-toggle="modal" data-target="#abreModal">editar</button>
+                    <a class="deletar" href="deletar/{{agendarProfissional_id}}">deletar</a>
+                </div>
+              </div>
+              {{/data}}
+            <span style="width: 100%;border-bottom:1px dotted black;margin-bottom:1em"></span>
+            <div class="alert alert-success" style="display: none;width: 100%;" id="result" name="{{result}}">
+                Agendado com sucesso!
+            </div>
+            <div class="alert alert-warning" style="display: none;width: 100%;" id="result" name="{{result}}">
+                Dados atualizados com sucesso!
+            </div>
+            <div class="alert alert-danger" style="display: none;width: 100%;" id="result" name="{{result}}">
+                Deletado com sucesso!
+            </div>
+            <h6 style="width: 100%;">Disponiveis para agendar:</h6>
+            <div class="result"></div>
+            </div>
+            </div>
+        </div>
+        

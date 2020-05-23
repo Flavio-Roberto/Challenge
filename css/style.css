@@ -1,0 +1,94 @@
+body{
+    font-family: sans-serif;
+}
+.selecaoEspecialidade {
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+}
+.selecaoEspecialidade > form {
+    margin-top: 10px;
+    text-align: center;
+  }
+.agendar {
+    background-color: #2AD18B;
+    border: none;
+    color: white;
+    font-size: 8px;
+    box-shadow: 0px 0px 3px 0px #888888;
+    padding: 2px 12px;
+    text-transform: uppercase;
+}
+.agendar:hover{
+    transition: all linear 0.2s;
+    background-color: rgb(23, 141, 92);
+    color: white;
+}
+.editar {
+  background-color: rgb(42, 87, 209);
+  border: none;
+  color: white;
+  font-size: 8px;
+  box-shadow: 0px 0px 3px 0px #888888;
+  padding: 2px 12px;
+  text-transform: uppercase;
+}
+.editar:hover{
+  transition: all linear 0.2s;
+  background-color: rgb(23, 70, 141);
+  color: white;
+}
+.deletar {
+  background-color: rgb(209, 42, 42);
+  border: none;
+  color: white;
+  font-size: 8px;
+  box-shadow: 0px 0px 3px 0px #888888;
+  padding: 2px 12px;
+  text-transform: uppercase;
+  -webkit-appearance: button;
+}
+.deletar:hover{
+  transition: all linear 0.2s;
+  background-color: rgb(141, 23, 23);
+  color: white;
+  -webkit-appearance: button;
+}
+.titulo {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 10px;
+    letter-spacing: 0px;
+}
+
+#especialidades {
+    font-size: 13px!important;
+    border: 1px solid white!important;
+    height: 30px!important;
+}
+
+#especialidades:required:invalid {
+    color: #ccc!important;
+  }
+  option[value=""][disabled] {
+    display: none;
+  }
+  option {
+    color: black;
+  }
+
+  .agendados {
+    display: flex;
+    flex-wrap: wrap;
+    width: 750px;
+    margin-top: 1em;
+  }
+  .agendados > div {
+    width: 248px;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .modal-title {
+      font-weight: 700;
+  }
