@@ -56,7 +56,7 @@ CREATE TABLE `agendarprofissional` (
 No terminal, só digitar a sequencia abaixo, lembrando que a `porta é: 3000`
 ```
 npm install
-node app.js
+node app.js ou nodemon app.js
 ```
 
 ## Tecnologias Utilizadas 
