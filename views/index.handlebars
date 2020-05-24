@@ -48,7 +48,7 @@
         </div>
         <div class="d-flex justify-content-center" >
           <div class="agendados">
-              <h6 style="width: 100%;">Agendados:</h6>
+              <h6 style="width: 100%;" class="h6_Agendados" name="{{TemDado}}">Agendados:</h6>
               <br/>
               {{#data}}
               <div class="d-flex flex-row">
@@ -62,7 +62,7 @@
                 </div>
               </div>
               {{/data}}
-            <span style="width: 100%;border-bottom:1px dotted black;margin-bottom:1em"></span>
+            <span style="width: 100%;border-bottom:1px dotted black;margin-bottom:1em; display:none;" class="linha"></span>
             <div class="alert alert-success" style="display: none;width: 100%;" id="result" name="{{result}}">
                 Agendado com sucesso!
             </div>
@@ -72,7 +72,7 @@
             <div class="alert alert-danger" style="display: none;width: 100%;" id="result" name="{{result}}">
                 Deletado com sucesso!
             </div>
-            <h6 style="width: 100%;">Disponiveis para agendar:</h6>
+            <h6 style="width: 100%; display:none" class="h6_Disponiveis">Disponiveis para agendar:</h6>
             <div class="result"></div>
             </div>
             </div>

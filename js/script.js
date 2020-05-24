@@ -1,6 +1,14 @@
 $(document).ready(function () {
     history.pushState("", "", "/");
 
+    if($(".h6_Agendados").attr('name') == 0){
+        $(".h6_Agendados").hide();
+        $(".linha").hide()
+    }else{
+        $(".h6_Agendados").show();
+        $(".linha").show()
+    }
+
     const token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZWVnb3ciLCJhdWQiOiJwdWJsaWNhcGkiLCJpYXQiOiIxNy0wOC0yMDE4IiwibGljZW5zZUlEIjoiMTA1In0.UnUQPWYchqzASfDpVUVyQY0BBW50tSQQfVilVuvFG38";
     //Consultar Médicos Agendados
     if(document.querySelectorAll('.medico').length !== 0){
@@ -64,6 +72,7 @@ $(document).ready(function () {
                 xhr.setRequestHeader('x-access-token', token);
             },
             success: function (result) {
+                $(".h6_Disponiveis").show()
                 for (let i = 0; i < result.content.length; i++) {
                     let nome = result.content[i].nome
                     //Alguns dados estao com o sexo errado
@@ -80,11 +89,12 @@ $(document).ready(function () {
                         if (result.content[i].especialidades[c].especialidade_id == $("#especialidades").val()) {
                             $(".agendados").append(`<div class="d-flex flex-row result"><div class="p-2 bd-highlight"><div style="background: #f1f1f1;width: 40px;height: 40px;" class="rounded-circle"></div></div><div class="p-2 bd-highlight">
                         ${nome} 
-                        <br/> CRM: ${crm}<br/><button type="button" id="agendar" class="agendar" onclick="agendar(${result.content[i].profissional_id},${result.content[i].especialidades[c].especialidade_id})" data-toggle="modal" data-target="#abreModal">agendar</button></div></div>`);
+                        <br/> <span class="crm"> CRM: ${crm} </span> <br/><button type="button" id="agendar" class="agendar" onclick="agendar(${result.content[i].profissional_id},${result.content[i].especialidades[c].especialidade_id})" data-toggle="modal" data-target="#abreModal">agendar</button></div></div>`);
                         }
                     }
                 }
             }, error: function (error) {
+                $(".h6_Disponiveis").hide()
                 alert(error);
             }
         });

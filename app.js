@@ -18,7 +18,7 @@ app.get('/:id?', function(req, res){
     // res.render('index', {now: new Date().toLocaleString()});
     if(!req.params.id){
         sql.query("select * from agendarprofissional", function(err, results, fields){
-            res.render('index',{data:results , now: new Date().toLocaleString()});
+            res.render('index',{data:results , now: new Date().toLocaleString(), TemDado: results.length});
         })
     }
 })
@@ -34,13 +34,13 @@ app.post('/salvar',urlencodeParser,function(req,res){
     sql.query('insert into agendarprofissional values(?,?,?,?,?,?,?,?)', ["",req.body.specialty_id,req.body.profissional_id,req.body.nome,
     req.body.cpf,req.body.source_id,req.body.birthdate,req.body.date_time]);
     sql.query("select * from agendarprofissional", function(err, results, fields){
-        res.render('index',{data:results , now: new Date().toLocaleString(),result: "adicionado"});
+        res.render('index',{data:results , now: new Date().toLocaleString(),result: "adicionado", TemDado: results.length});
     })
 })
 app.get('/deletar/:id', function(req, res){
     sql.query("delete from agendarprofissional where agendarProfissional_id=?",[req.params.id]);
     sql.query("select * from agendarprofissional", function(err, results, fields){
-        res.render('index',{data:results , now: new Date().toLocaleString(),result: "deletado"});
+        res.render('index',{data:results , now: new Date().toLocaleString(),result: "deletado", TemDado: results.length});
     })
 })
 
@@ -48,7 +48,7 @@ app.post("/update/:id", urlencodeParser, function(req,res){
     sql.query("update agendarprofissional ap set ap.name=?,ap.source_id=?,ap.birthdate=?,ap.cpf=? where ap.agendarProfissional_id=?",
     [req.body.nome, req.body.source_id, req.body.birthdate, req.body.cpf, req.body.ap_id])
     sql.query("select * from agendarprofissional", function(err, results, fields){
-        res.render('index',{data:results , now: new Date().toLocaleString(),result: "atualizado"});
+        res.render('index',{data:results , now: new Date().toLocaleString(),result: "atualizado", TemDado: results.length});
     })
 })
 

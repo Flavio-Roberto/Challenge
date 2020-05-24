@@ -92,3 +92,8 @@ body{
   .modal-title {
       font-weight: 700;
   }
+
+.medico, .crm {
+  color: #ccc;
+  font-size: 12px;
+}
